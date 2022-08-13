@@ -1,0 +1,191 @@
+/* Globals */
+@font-face {
+  font-family: Edu;
+  src: url("/fonts/EduSABeginner-Regular.ttf")
+   ,url("/fonts/EduSABeginner-Bold.ttf")
+   ,url("/fonts/EduSABeginner-Medium.ttf")
+   ,url("/fonts/EduSABeginner-SemiBold.ttf");
+  font-weight: 400 700;
+}
+
+/* Some browsers don't inherit fonts for forms */
+button,
+input,
+select,
+textarea {
+  font-family : inherit;
+  font-size : 100%;
+}
+
+/* Consistency in Web forms */
+button,
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+li {
+  font-size: 80%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-zoom: inherit;
+}
+
+html {
+  font-size: 16px;
+  max-zoom: 10%;
+  
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
+  --layer-max: 1000;
+  --layer-mid: 50;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  block-size: 300vh;
+  margin-block-end: 50vh;
+  font-family: Edu;
+  font-weight: 400;
+}
+
+.num {
+  font-variant-numeric: diagonal-fractions;
+  
+}
+
+
+
+.container {
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -.075ch;
+  background-color: #121212;
+
+  
+}
+
+.element {
+    background-image: linear-gradient(to top right,red 25%,purple 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+
+
+}
+
+.comment  {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  border-inline-start: 5px solid #0B136C;
+  gap: 1em;
+  background-color: #7883FF;
+  color: white;
+  inline-size: clamp(50vw, calc(20rem - 4vw), 36rem);
+  padding: 1em .5em;
+  margin-inline: auto;
+  border-radius: .25em;
+  
+}
+
+.comment > *:first-child {
+  background-image: url("/images/settings_black_24dp.svg");
+  object-fit: contain;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  
+  
+}
+
+.comment > *:last-child {
+  color: #FFDBC1;
+}
+
+.fab {
+  --_size: clamp(4rem,calc(3.8rem + 4vw), 8rem);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: white;
+  background-color: #DC1064;
+  width: var(--_size);
+  height: var(--_size);
+  position: fixed;
+  inset-block-end: 1rem;
+  inset-inline-end: 1rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  transition: transform ease-in-out 40ms;
+  z-index: 1000;
+
+}
+
+.fab:active {
+  opacity: .8;
+  transform: translateY(10%) rotate(45deg);
+}
+
+.drop-cap::first-letter {
+  --_pad: 1rem;
+  float: inline-start;
+  font-size: 6rem;
+  line-height: .7;
+  margin-top: var(--_pad);
+  padding-right: var(--_pad);
+  
+}
+
+dt {
+  position: sticky;
+  top: 0;
+  left: 0;
+  
+  background-color: black;
+  color: white;
+}
+
+dd {
+  block-size: 100vh;
+}
+
+.flow > * + * {
+  margin-block-start: 1em;
+}
+
+ol {
+  list-style-type: lower-roman;
+  font-size: 200%;
+}
+li {
+  font-size: 80%;
+}
+
+.menu {
+  display: none;
+  block-size: 100vh;
+  inline-size: 100vw;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: white;
+  padding: 1em;
+  z-index: var(--layer-mid);
+}
+
